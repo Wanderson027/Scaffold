@@ -953,7 +953,7 @@ button.close {
 .btn-success {
   color: #ffffff;
   text-shadow: none;
-  background: #7cbb00;
+  background: dodgerblue;
   border-color: #7cbb00;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #51a351;
