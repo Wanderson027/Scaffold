@@ -2,7 +2,7 @@
 (function() {
     'use strict';
 
-    var UnidescBiblioteca = angular.module("UnidescBiblioteca", []);
+    var bibliotecaApp = angular.module("bibliotecaApp", []);
     console.log("Está Funfando..");
 
 }());
