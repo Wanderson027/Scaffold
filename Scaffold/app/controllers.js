@@ -1,7 +1,7 @@
 (function() {
     'use strict';
-    var UnidescBiblioteca = angular.module("UnidescBiblioteca");
-    portalApp.controller('cadastrarLivroController', cadastrarLivroController);
+    var bibliotecaApp = angular.module("bibliotecaApp");
+    bibliotecaApp.controller('cadastrarLivroController', cadastrarLivroController);
 
     cadastrarLivroController.$inject = ['$scope'];
 
@@ -30,9 +30,7 @@
 
             vm.aluno = {};
             vm.index = -1;
-        };
-
-
+        }
         vm.editarAluno = function(item) {
             vm.aluno = angular.copy(vm.alunos[item]);
             vm.index = item;
