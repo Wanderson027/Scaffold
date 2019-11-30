@@ -1783,7 +1783,34 @@ ul.portfolio-area li {
 
 }
 .inserir1{
-	text-align: center;
+	text-align: ;
 	margin:auto;
-	border: solid 3px 3px 3px 3pc black;
+	height: 500px;
+	background-color: #ffffff28;
+	
 }
+.divint{
+	
+	position: absolute;
+	margin: 90px 495px;
+	border-radius: 10px;
+
+	margin;
+	height: 400px;
+	width: 325px;
+	background-color: #7dbb0093;
+}
+.cadastro1{
+	margin-top: 50px ;
+	margin-left: 50px ;
+	border-radius: 10px;
+		
+}
+#nomeLivro{
+	border-radius: 5px;
+}
+label{
+	font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+/*-------------------------------------------*/

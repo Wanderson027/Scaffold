@@ -11,11 +11,11 @@
         vm.aluno = {};
 
         vm.alunos = [{
-            acoes: "",
-            matricula: "UNI8080",
-            nome: "Carlos Eduardo Feitosa da Costa",
-            cpf: "04680698101",
-            email: "carlos@hotmail.com",
+            nome: "",
+            autor: "",
+            nome: "",
+            editora: "",
+            valor: "",
 
         }];
 
