@@ -1783,34 +1783,28 @@ ul.portfolio-area li {
 
 }
 .inserir1{
-	text-align: ;
-	margin:auto;
-	height: 500px;
-	background-color: #ffffff28;
+	margin: auto;
+	text-align:center;
 	
 }
-.divint{
-	
-	position: absolute;
-	margin: 90px 495px;
-	border-radius: 10px;
 
-	margin;
-	height: 400px;
-	width: 325px;
-	background-color: #7dbb0093;
-}
-.cadastro1{
-	margin-top: 50px ;
-	margin-left: 50px ;
-	border-radius: 10px;
-		
-}
+
 #nomeLivro{
 	border-radius: 5px;
+	width: 30em;
+	display: inline-block;
 }
 label{
 	font-family: 'Open Sans',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
 /*-------------------------------------------*/
+.form1{
+	margin:auto;
+	margin-left: 80px;
+	
+}
+.form-group col-lg-4{
+	float: left ;
+	wod
+}
