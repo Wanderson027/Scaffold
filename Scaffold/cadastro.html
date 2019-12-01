@@ -183,16 +183,15 @@
         <input ng-model="vm.livro.valor" type="text" name="field4" class="field-style field-split align-right" placeholder="R$ Valor" />
     </li>
     
-    
-      <input ng-click="vm.adicionarlivros()" id="butao" class="btn btn-primary" type="submit" value="Adicionar" />
-      <input ng-click="" id="butao" class="btn btn-danger" type="submit" value="Editar" />
+    <button id="butao" class="btn btn-primary"type="button" ng-click="vm.adicionarLivros()">Adicionar</button>
+    <button ng-click="" id="butao" class="btn btn-danger" type="submit" value="Editar">Editar</button>>
     
     </ul>
     </form>
 
     <div>
         <table class="table">
-            <thead class="_">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">Titulo</th>
                     <th scope="col">Autor</th>
@@ -202,8 +201,10 @@
                     <th scope="col">R$ valor</th>
                     
                 </tr>
-            </thead>
-            <tbody > 
+              </thead>
+        </table>
+        <table class="table1">
+            <tbody> 
                 <tr ng-repeat="livro in vm.livros track by $index">
                     <td><i class="far fa-edit" ng-click="vm.editarlivro"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarlivro()"></i></td>
                     <td>{{livro.titulo}}</td>
