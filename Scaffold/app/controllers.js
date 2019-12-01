@@ -1,42 +1,43 @@
 (function() {
     'use strict';
     var bibliotecaApp = angular.module("bibliotecaApp");
-    bibliotecaApp.controller('cadastrarLivroController', cadastrarLivroController);
+    bibliotecaApp.controller('cadastrarLivrosController', cadastrarLivrosController);
 
-    cadastrarLivroController.$inject = ['$scope'];
+    cadastrarLivrosController.$inject = ['$scope'];
 
-    function cadastrarLivroController($scope) {
+    function cadastrarLivrosController($scope) {
         var vm = this;
         vm.index = -1;
-        vm.aluno = {};
+        vm.livro = {};
 
-        vm.alunos = [{
-            nome: "",
+        vm.livro = [{
+            titulo: "",
             autor: "",
-            nome: "",
             editora: "",
+            data: "",
+            genero: "",
             valor: "",
 
         }];
 
 
-        vm.adicionarAlunos = function() {
-            console.log(vm.aluno);
+        vm.adicionarLivros = function() {
+            console.log(vm.livro);
             if (vm.index === -1) {
-                vm.alunos.push(vm.aluno);
+                vm.livro.push(vm.livro);
             } else {
-                vm.alunos[vm.index] = vm.aluno;
+                vm.livro[vm.index] = vm.livro;
             }
 
-            vm.aluno = {};
+            vm.livro = {};
             vm.index = -1;
-        }
-        vm.editarAluno = function(item) {
-            vm.aluno = angular.copy(vm.alunos[item]);
+        };
+        vm.editarLivros = function(item) {
+            vm.livro = angular.copy(vm.livro[item]);
             vm.index = item;
         };
-        vm.deletarAluno = function(item) {
-            vm.alunos.splice(item, 1);
+        vm.deletarLivros = function(item) {
+            vm.livro.splice(item, 1);
         };
 
     }
