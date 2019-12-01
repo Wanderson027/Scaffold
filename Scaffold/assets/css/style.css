@@ -1875,3 +1875,14 @@ label{
 	width: 109px;
 	height: 40px;
 }
+.table {
+	text-align: center;
+	width: 600px;
+	margin-left: 380px;
+	
+}
+.thead-dark th{
+	text-align: center;
+	color: #e7e7e7;
+	background-color: #0f0f0f;
+}

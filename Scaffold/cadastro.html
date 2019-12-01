@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="UnidescBiblioteca">
+<html lang="en" ng-app="bibliotecaApp">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,6 +12,8 @@
   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
 
   <!-- styles --->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -38,7 +40,7 @@
   ======================================================== -->
 </head>
 
-<body ng-controller="UnidescBiblioteca">
+<body ng-controller="cadastrarLivrosController as vm">
 
   <header>
     <!-- Navbar
@@ -168,25 +170,54 @@
     <ul>
     <li>
       <label> Cadastro Livro</label>
-        <input type="text" name="field1" class="field-style field-split align-left" placeholder="Titulo" />
-        <input type="text" name="field2" class="field-style field-split align-right" placeholder="Autor" />
+        <input ng-model="vm.livro.titulo" type="text" name="field1" class="field-style field-split align-left" placeholder="Titulo" />
+        <input ng-model="vm.livro.autor" type="text" name="field2" class="field-style field-split align-right" placeholder="Autor" />
     
     </li>
     <li>
-        <input type="text" name="field3" class="field-style field-split align-left" placeholder="Editora" />
-        <input type="date" name="field4" class="field-style field-split align-right" placeholder="Ano" />
+        <input ng-model="vm.livro.editora" type="text" name="field3" class="field-style field-split align-left" placeholder="Editora" />
+        <input ng-model="vm.livro.data" type="date" name="field4" class="field-style field-split align-right" placeholder="Ano" />
     </li>
     <li>
-        <input type="text" name="field3" class="field-style field-split align-left" placeholder="Genero" />
-        <input type="text" name="field4" class="field-style field-split align-right" placeholder="R$ Valor" />
+        <input ng-model="vm.livro.genero" type="text" name="field3" class="field-style field-split align-left" placeholder="Genero" />
+        <input ng-model="vm.livro.valor" type="text" name="field4" class="field-style field-split align-right" placeholder="R$ Valor" />
     </li>
     
     
-      <input id="butao" class="btn btn-primary" type="submit" value="Enviar" />
-      <input id="butao" class="btn btn-danger" type="submit" value="Editar" />
+      <input ng-click="vm.adicionarlivros()" id="butao" class="btn btn-primary" type="submit" value="Adicionar" />
+      <input ng-click="" id="butao" class="btn btn-danger" type="submit" value="Editar" />
     
     </ul>
     </form>
+
+    <div>
+        <table class="table">
+            <thead class="_">
+                <tr>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Editora</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">genero</th>
+                    <th scope="col">R$ valor</th>
+                    
+                </tr>
+            </thead>
+            <tbody > 
+                <tr ng-repeat="livro in vm.livros track by $index">
+                    <td><i class="far fa-edit" ng-click="vm.editarlivro"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarlivro()"></i></td>
+                    <td>{{livro.titulo}}</td>
+                    <td>{{livro.autor}}</td>
+                    <td>{{livro.editora}}</td>
+                    <td>{{livro.data}}</td>
+                    <td>{{livro.genero}}</td>
+                    <td>{{livro.valor}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
   <!-- Footer
  ================================================== -->
   <footer class="footer">

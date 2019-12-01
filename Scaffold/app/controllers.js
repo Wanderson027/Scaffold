@@ -1,42 +1,43 @@
 (function() {
     'use strict';
     var bibliotecaApp = angular.module("bibliotecaApp");
-    bibliotecaApp.controller('cadastrarLivroController', cadastrarLivroController);
+    bibliotecaApp.controller('cadastrarLivrosController', cadastrarLivrosController);
 
-    cadastrarLivroController.$inject = ['$scope'];
+    cadastrarLivrosController.$inject = ['$scope'];
 
-    function cadastrarLivroController($scope) {
+    function cadastrarLivrosController($scope) {
         var vm = this;
         vm.index = -1;
-        vm.aluno = {};
+        vm.livro = {};
 
-        vm.alunos = [{
-            nome: "",
-            autor: "",
-            nome: "",
-            editora: "",
-            valor: "",
+        vm.livros = [{
+            titulo: "Flatulente",
+            autor: "Wanderson",
+            editora: "poup cannon",
+            data: "25-09-1995",
+            genero: "indefinido",
+            valor: "69,00",
 
         }];
 
 
-        vm.adicionarAlunos = function() {
-            console.log(vm.aluno);
+        vm.adicionarLivros = function() {
+
             if (vm.index === -1) {
-                vm.alunos.push(vm.aluno);
+                vm.livros.push(vm.livro);
             } else {
-                vm.alunos[vm.index] = vm.aluno;
+                vm.livros[vm.index] = vm.livro;
             }
 
-            vm.aluno = {};
+            vm.livro = {};
             vm.index = -1;
-        }
-        vm.editarAluno = function(item) {
-            vm.aluno = angular.copy(vm.alunos[item]);
+        };
+        vm.editarLivros = function(item) {
+            vm.livro = angular.copy(vm.livros[item]);
             vm.index = item;
         };
-        vm.deletarAluno = function(item) {
-            vm.alunos.splice(item, 1);
+        vm.deletarLivros = function(item) {
+            vm.livros.splice(item, 1);
         };
 
     }
