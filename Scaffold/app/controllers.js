@@ -10,34 +10,34 @@
         vm.index = -1;
         vm.livro = {};
 
-        vm.livro = [{
-            titulo: "",
-            autor: "",
-            editora: "",
-            data: "",
-            genero: "",
-            valor: "",
+        vm.livros = [{
+            titulo: "Flatulente",
+            autor: "Wanderson",
+            editora: "poup cannon",
+            data: "25-09-1995",
+            genero: "indefinido",
+            valor: "69,00",
 
         }];
 
 
         vm.adicionarLivros = function() {
-            console.log(vm.livro);
+
             if (vm.index === -1) {
-                vm.livro.push(vm.livro);
+                vm.livros.push(vm.livro);
             } else {
-                vm.livro[vm.index] = vm.livro;
+                vm.livros[vm.index] = vm.livro;
             }
 
             vm.livro = {};
             vm.index = -1;
         };
         vm.editarLivros = function(item) {
-            vm.livro = angular.copy(vm.livro[item]);
+            vm.livro = angular.copy(vm.livros[item]);
             vm.index = item;
         };
         vm.deletarLivros = function(item) {
-            vm.livro.splice(item, 1);
+            vm.livros.splice(item, 1);
         };
 
     }

@@ -40,7 +40,7 @@
   ======================================================== -->
 </head>
 
-<body ng-controller="bibliotecaApp">
+<body ng-controller="cadastrarLivrosController as vm">
 
   <header>
     <!-- Navbar
@@ -170,8 +170,8 @@
     <ul>
     <li>
       <label> Cadastro Livro</label>
-        <input ng-model="vm.livros.titulo" type="text" name="field1" class="field-style field-split align-left" placeholder="Titulo" />
-        <input ng-model="autor" type="text" name="field2" class="field-style field-split align-right" placeholder="Autor" />
+        <input ng-model="vm.livro.titulo" type="text" name="field1" class="field-style field-split align-left" placeholder="Titulo" />
+        <input ng-model="vm.livro.autor" type="text" name="field2" class="field-style field-split align-right" placeholder="Autor" />
     
     </li>
     <li>
@@ -184,7 +184,7 @@
     </li>
     
     
-      <input ng-click="vm.adicionarlivro()" id="butao" class="btn btn-primary" type="submit" value="Adicionar" />
+      <input ng-click="vm.adicionarlivros()" id="butao" class="btn btn-primary" type="submit" value="Adicionar" />
       <input ng-click="" id="butao" class="btn btn-danger" type="submit" value="Editar" />
     
     </ul>
@@ -204,7 +204,7 @@
                 </tr>
             </thead>
             <tbody > 
-                <tr ng-repeat="livro in vm.livro track by $index">
+                <tr ng-repeat="livro in vm.livros track by $index">
                     <td><i class="far fa-edit" ng-click="vm.editarlivro"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarlivro()"></i></td>
                     <td>{{livro.titulo}}</td>
                     <td>{{livro.autor}}</td>
