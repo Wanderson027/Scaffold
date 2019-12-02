@@ -9,6 +9,7 @@
   <meta name="author" content="">
   
   <!--Scripts-->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
   <script type="text/javascript" src="app/app.js"></script>
   <script type="text/javascript" src="app/controllers.js"></script>
@@ -34,9 +35,11 @@
   <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
   <!-- =======================================================
-    Theme Name: Unidesc Biblioteca
+    Nome: Unidesc Biblioteca
     Theme URL: ???
-    Author: Wanderson Rafael, Vanderlei Pinheiro
+    Author: Wanderson Rafael, Vanderlei Pinheiro.
+    Cooperação: Agradeço a imensa ajuda do Meu grande Amigo CARLOS EDUARDO que foi de grande ajuda
+    para que este trabalho fosse realizado!
   ======================================================== -->
 </head>
 
@@ -183,7 +186,7 @@
         <input ng-model="vm.livro.valor" type="text" name="field4" class="field-style field-split align-right" placeholder="R$ Valor" />
     </li>
     
-    <button id="butao" class="btn btn-primary" type="button" ng-click="vm.adicionarLivros()">Adicionar</button>
+    <button id="butao" class="btn btn-primary" type="button" ng-click="vm.adicionarLivros($index)">Adicionar</button>
     
     
     </ul>
@@ -192,26 +195,31 @@
     <div>
       <table class="table">
         <thead class="thead-dark">
-          <tr>
+          <tr class="th1"> 
             <th scope="col">Titulo</th>
             <th scope="col">Autor</th>
             <th scope="col">Editora</th>
             <th scope="col">Ano</th>
             <th scope="col">Genero</th>
             <th scope="col">R$ Valor</th>
+            <th scope="col">Opçoes</th>
+
           </tr>
         </thead>
         </table>     
       <table class="table">
           <tbody> 
-              <tr ng-repeat="livro in vm.livros track by $index">
-                  <td><i class="far fa-edit" ng-click="vm.editarlivro"> </i><i class="fas fa-trash-alt" ng-click="vm.deletarlivro()"></i></td>
-                  <td>{{livro.titulo}}</td>
+              <tr  ng-repeat="livro in vm.livros track by $index">
+                  <th scope="row">{{livro.titulo}}</th>
                   <td>{{livro.autor}}</td>
                   <td>{{livro.editora}}</td>
                   <td>{{livro.data}}</td>
                   <td>{{livro.genero}}</td>
                   <td>{{livro.valor}}</td>
+                  <td>
+                    <i class="far fa-edit"  ng-click="vm.editarLivro($index)">editar</i>
+                    <i class="fas fa-trash-alt" ng-click="vm.deletarLivro($index)">deletar</i>
+                  </td>
               </tr>
           </tbody>
       </table>

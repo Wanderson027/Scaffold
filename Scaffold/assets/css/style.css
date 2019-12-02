@@ -1881,17 +1881,13 @@ label{
 	margin-left: 380px;
 	
 }
-.thead-dark th{
+.thead-dark .th1{
 	text-align: center;
 	color: #e7e7e7;
 	background-color: #0f0f0f;
 	
 
 }
-.table1 {
-	text-align: center;
-	width: 600px;
-	margin-left: 360px;
-	background-color: rgba(45, 119, 162, 0.349);
-	
+ #tbodyth {
+	padding:03px;
 }
