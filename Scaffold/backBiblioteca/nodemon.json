@@ -1,0 +1,8 @@
+{
+    "env": {
+        "MONGO_PWD": "ratim033",
+        "MONGO_USR": "wanderson028",
+        "PORT": "3001",
+        "JWT_KEY": "chave-privada"
+    }
+}
