@@ -89,7 +89,7 @@ vm.editarLivroBase = function() {
 vm.limparLivro = function(item){
     vm.livro = {};
     vm.index = -1;
-}
+};
 vm.deletarLivroBase = function(item) {
     $http.delete(SERVICE_HOST_HTTP + '/livro/' + vm.livro[item]._id)
         .then(
@@ -117,65 +117,3 @@ vm.adicionarLivroBase = function() {
     }    
 }());  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*function cadastrarLivrosController($scope, $http) {
-        var vm = this;
-        var SERVICE_HOST_HTTP = "http://104.167.117.151";
-
-        vm.index = -1;
-        vm.livro = {};
-
-        vm.livros = [{
-            titulo: "",
-            autor: "",
-            editora: "",
-            data: "",
-            genero: "",
-            valor: "",
-
-        }];
-
-
-        vm.adicionarLivros = function() {
-
-            if (vm.index === -1) {
-                vm.livros.push(vm.livro);
-            } else {
-                vm.livros[vm.index] = vm.livro;
-            }
-
-            vm.livro = {};
-            vm.index = -1;
-        };
-        vm.editarLivros = function(item) {
-            vm.livro = angular.copy(vm.livros[item]);
-            vm.index = item;
-        };
-        vm.deletarLivros = function(item) {
-            vm.livros.splice(item, 1);
-        };
-
-    }*/
